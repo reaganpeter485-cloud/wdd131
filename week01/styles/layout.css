@@ -1,0 +1,44 @@
+body{
+    display:grid;
+    padding:0;
+    margin:0;
+   
+}
+nav ul {
+   display:flex;
+   justify-content:space-around;
+   background-color:grey;
+   padding:10px;
+
+}
+header{
+    background-color:cadetblue;
+    text-align:start;
+}
+.main-content{
+    background-color:lightgrey;
+    text-align:start;
+}
+.side-content{
+    background-color:lightblue;
+    text-align:start;
+}
+main{
+    display:grid;
+    grid-template-columns:3fr 2fr;
+    height: 400px;
+    width: 100%;
+}
+footer{
+    background-color:cadetblue;
+    text-align:center;
+    height: 100px;;
+    
+}
+h1, h2{
+    color:#ffff;
+}
+nav li a{
+    
+    color:#ffff;
+}
