@@ -7,7 +7,6 @@ body {
   background-color: #ffffff;
 }
 
-/* Header Rules (Explicit Element Rule) */
 header {
   background-color: #196084;
   color: #ffffff;
@@ -46,7 +45,7 @@ nav a:hover {
   border-radius: 4px;
 }
 
-/* Main Layout Rules (Explicit Element Rule using CSS Grid) */
+/
 main {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -65,7 +64,6 @@ main h1 {
   font-weight: 400;
 }
 
-/* Card Block Components */
 .card {
   border: 1px solid #cccccc;
   border-radius: 8px;
