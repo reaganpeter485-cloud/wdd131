@@ -1,26 +1,27 @@
+/* Base Document Rules */
 body {
   font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight:  400;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+  font-weight: 400;
   margin: 0;
   padding: 0;
   background-color: #ffffff;
 }
 
+/* Header Rules (Explicit Element Rule) */
+header {
+  background-color: #196084;
+  color: #ffffff;
+}
 
 header span {
   display: block;
   text-align: center;
-  background-color: #196084;
-  color: white;
-  padding: 20px;
+  padding: 30px 10px;
   font-size: 1.5rem;
   letter-spacing: 0.5px;
 }
 
+/* Navigation Layout using CSS Flexbox */
 nav ul {
   display: flex;
   flex-direction: row;
@@ -35,39 +36,43 @@ nav a {
   color: #ffffff;
   text-decoration: none;
   font-weight: 400;
-  transition: color 0.2s ease;
+  padding: 5px 10px;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 nav a:hover {
   color: #70b8dc;
+  background-color: #444444;
+  border-radius: 4px;
 }
 
-
-.page-title {
-  text-align: center;
-  color: #333333;
-  font-size: 2.5rem;
-  margin: 2rem 0;
-  font-weight: 400;
-}
-
-
-.main-grid {
+/* Main Layout Rules (Explicit Element Rule using CSS Grid) */
+main {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 20px;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 2rem auto;
   padding: 0 20px;
 }
 
+main h1 {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #333333;
+  font-size: 2.5rem;
+  margin: 1rem 0;
+  font-weight: 400;
+}
 
+/* Card Block Components */
 .card {
   border: 1px solid #cccccc;
   border-radius: 8px;
   overflow: hidden;
   background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  padding-bottom: 20px;
+  align-self: start;
 }
 
 .card h2 {
@@ -82,85 +87,48 @@ nav a:hover {
 .card h3 {
   text-align: center;
   color: #333333;
-  text-decoration: none;
   font-size: 1.3rem;
   margin: 25px 0 15px 0;
 }
 
-
-.profile-card {
-  padding-bottom: 20px;
-}
-
-.grid-row {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 20px;
-  padding: 20px;
-  align-items: center;
-}
-
-.grid-row-flag {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 20px;
-  padding: 0 20px;
-  align-items: center;
-}
-
-.profile-img {
-  border: 1px solid #dddddd;
-  padding: 4px;
-  background-color: white;
-}
-
-.flag-container {
-  text-align: center;
-}
-
-.flag-container img {
-  border: 1px solid #dddddd;
-}
-
-.caption {
-  font-style: italic;
-  font-size: 0.85rem;
-  color: #666666;
-  margin-top: 5px;
-}
-
-.profile-card p {
+.card p {
   line-height: 1.6;
   color: #333333;
-  margin: 0;
+  margin: 15px 20px;
 }
 
-
-.resources-card {
-  align-self: start;
+.card img {
+  display: block;
+  margin: 15px auto;
+  border: 1px solid #dddddd;
+  padding: 4px;
+  background-color: #ffffff;
+  max-width: 100%;
+  height: auto;
 }
 
-.resources-list {
+/* Resource List Customization */
+.card ul {
   list-style-type: disc;
-  padding: 20px 20px 20px 40px;
+  padding: 10px 20px 10px 40px;
   margin: 0;
 }
 
-.resources-list li {
-  margin-bottom: 10px;
+.card ul li {
+  margin-bottom: 12px;
 }
 
-.resources-list a {
+.card ul a {
   color: #0000ee;
   text-decoration: underline;
 }
 
-
+/* Footer Rules (Explicit Element Rule) */
 footer {
   background-color: #196084;
-  color: white;
+  color: #ffffff;
   text-align: center;
-  padding: 15px;
+  padding: 20px;
   margin-top: 40px;
   font-size: 0.95rem;
 }
@@ -171,19 +139,19 @@ footer p {
 
 #lastModified {
   color: #ffff00;
+  font-weight: bold;
 }
 
-
+/* Responsive breakpoint configuration */
 @media (max-width: 850px) {
-  .main-grid {
+  main {
     grid-template-columns: 1fr;
   }
-  .grid-row, .grid-row-flag {
-    grid-template-columns: 1fr;
+  
+  nav ul {
+    flex-direction: column;
     text-align: center;
-  }
-  .profile-img, .flag-container {
-    grid-row: 1;
-    justify-self: center;
+    gap: 10px;
+    padding: 15px;
   }
 }
