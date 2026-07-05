@@ -3,65 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131-Dynamic Web Fundamentals|Regan Peter Mwangi</title>
-    <meta name="description" content="WDD 131-Dynamic Web Fundamentals-Regan Peter Mwangi-course landing page">
+    <title>WDD 131-Dynamic Web Fundamentals-Regan Peter Mwangi</title>
+    <meta name="description" content="WDD 131-Dynamic Web Fundamentals course portal for Regan Peter Mwangi. A collection of web development resources, project links, and profile details.">
     <meta name="author" content="Regan Peter Mwangi">
-    <link rel="stylesheet" href="styles/base.css">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-
+    <link href="https://googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- External CSS stylesheet -->
+    <link rel="stylesheet" href="styles/base.css">
+    <!-- Defer loading script until DOM parsed -->
     <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
     <header>
         <span id="course-title">WDD 131: Dynamic Web Fundamentals</span>
         <nav>
-            <ul>
-                <li><a href="https://linkedin.com">LinkedIn</a></li>
-                <li><a href="https://instructure.com">Canvas</a></li>
-                <li><a href="https://churchofjesuschrist.org">Scripture</a></li>
-                <li><a href="#">Final Project</a></li>
-            </ul>
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://instructure.com" target="_blank">I-Learn</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank">Scripture</a>
+            <a href="final-project/index.html">Final Project</a>
         </nav>
     </header>
-    
+
     <main>
         <h1>Regan Peter Mwangi</h1>
 
-        <section class="card">
-           <h2>About Me</h2>
-           <p>
-               My name is Regan Peter Mwangi.
+        <div class="grid-container">
+            <!-- About Me Card -->
+            <section class="card">
+                <h2>About Me</h2>
+                <div class="card-content bio-layout">
+                    <div class="bio-text">
+                        <p>               My name is Regan Peter Mwangi.
                I am a dedicated Software Engineering and Information Technology student with hands-on experience in marketing, customer engagement, business management, and freelance pre-sales.
-               I was born in Kenya as a first born of 6 siblings. I have a passion for technology and innovation, and I am constantly seeking opportunities to expand my knowledge and skills in the ever-evolving field of software engineering.
-           </p>
-           <img src="images/photo.webp" alt="Regan Peter Mwangi" width="150" height="200">
-           
-           <h3>Nairobi, Kenya</h3>
-           <img src="images/kenya.webp" alt="Kenya Flag" width="200" height="133">
-           <p>
-               Kenya, officially the Republic of Kenya, is a country located in East Africa.
+               I was born in Kenya as a first born of 6 siblings. I have a passion for technology and innovation, and I am constantly seeking opportunities to expand my knowledge and skills in the ever-evolving field of software engineering
+</p>
+                        <h3>Nairobi, Kenya</h3>
+                        <div class="flag-container">
+                            <img src="images/kenya.webp" alt="Official Flag of Kenya" width="150">
+                            <p class="caption">Official Flag of Kenya</p>
+                        </div>
+                    </div>
+                    <div class="bio-image">
+                        <img src="images/photo.webp" alt="Regan Peter Mwangi" width="120">
+                    </div>
+                    <div class="flag-text">
+                        <p>Kenya, officially the Republic of Kenya, is a country located in East Africa.
                With an estimated population of more than 53.3 million as of mid-2025, it is the 27th-most populous country in the world and the seventh-most populous in Africa.
-               Kenya's capital and largest city is Nairobi. 
-           </p>
-        </section>
+               Kenya's capital and largest city is Nairobi. </p>
+                    </div>
+                </div>
+            </section>
 
-        <section class="card">
-            <h2>Web Dev Resources</h2>
-            <ul>
-                <li><a href="https://dev.to" target="_blank">Dev.to Community</a></li>
-                <li><a href="https://smashingmagazine.com" target="_blank">Smashing Magazine</a></li>
-                <li><a href="https://css-tricks.com" target="_blank">CSS-Tricks</a></li>
-                <li><a href="https://w3schools.com" target="_blank">W3Schools</a></li>
-                <li><a href="https://udemy.com" target="_blank">Udemy</a></li>
-            </ul>
-        </section>
+            <!-- Web Dev Resources Card -->
+            <section class="card">
+                <h2>Web Dev Resources</h2>
+                <div class="card-content">
+                    <ul class="resources-list">
+                        <li><a href="https://dev.to" target="_blank">Dev.to Community</a></li>
+                        <li><a href="https://smashingmagazine.com" target="_blank">Smashing Magazine</a></li>
+                        <li><a href="https://css-tricks.com" target="_blank">CSS Tricks</a></li>
+                        <li><a href="https://w3schools.com" target="_blank">W3 Schools</a></li>
+                        <li><a href="https://udemy.com" target="_blank">Udemy</a></li>
+                        <li><a href="https://picsum.photos" target="_blank">Lorem Picsum Image Placeholder</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer>
-        <p>&copy;<span id="currentyear"></span> | Regan Peter Mwangi | Kenya</p>
+        <p>&copy;<span id="currentyear"></span> ✅Regan Peter Mwangi✅ Kenya</p>
         <p id="lastModified"></p>
     </footer>
 </body>
 </html>
+
